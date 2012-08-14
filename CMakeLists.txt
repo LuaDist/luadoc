@@ -11,6 +11,10 @@ include ( lua )
 
 # Install all files and documentation
 install_lua_executable ( luadoc src/luadoc.lua )
+
+# Install all modules directly
 install ( DIRECTORY src/luadoc DESTINATION ${INSTALL_LMOD} COMPONENT Runtime )
+
 install_data ( README )
 install_doc ( doc/ )
+install_test ( test/ )
